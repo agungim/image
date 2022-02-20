@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 #%matplotlib widget
 
 # read the image of a plant seedling as grayscale from the outset
-image = skimage.io.imread(fname='image/agung1.jpg', as_gray=True)
+image = skimage.io.imread(fname='image/1k.jpg', as_gray=True)
 
 # display the image
 fig, ax = plt.subplots()
