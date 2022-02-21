@@ -25,6 +25,7 @@ for x in range(x1,x2):
 
 np.savetxt("image/1k.csv", arr, delimiter=",")
 arr2=[]
+arr4=[]
 with open("image/1k.csv") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
@@ -36,6 +37,7 @@ with open("image/1k.csv") as csv_file:
         line_count += 1
 
         arr2.append(str1)
+        arr4.append(row[0])
         '''
         if line_count == 0:
             print(f'Column names are {", ".join(row)}')
@@ -51,3 +53,17 @@ with open('image/1k.txt', 'w') as f:
     for line in arr2:
         f.write(line)
         f.write('\n')   
+
+
+
+from scipy.fft import fft, fftfreq
+from matplotlib import pyplot as plt
+# Number of samples in normalized_tone
+N = 110
+print(arr4)
+yf = fft(arr4)
+xf = fftfreq(N, 1 / 10)[:N]
+
+plt.plot(xf, np.abs(yf))
+plt.show()
+
