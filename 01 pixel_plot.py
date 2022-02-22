@@ -5,7 +5,10 @@ from PIL import Image
 from matplotlib import image
 from matplotlib import pyplot
 # load image as pixel array
-image = image.imread('image/1k.jpg')
+
+filename='image/10k.jpg'
+filename2='image/gr_10k.jpg'
+image = image.imread(filename)
 # summarize shape of the pixel array
 print(image.dtype)
 print(image.shape)
@@ -15,7 +18,7 @@ pyplot.show()
 
 
 
-im = np.array(Image.open('image/1k.jpg').convert('L')) #you can pass multiple arguments in single line
+im = np.array(Image.open(filename).convert('L')) #you can pass multiple arguments in single line
 print(type(im))
 
-gr_im= Image.fromarray(im).save('image/gr_1k.jpg')
+gr_im= Image.fromarray(im).save(filename2)
