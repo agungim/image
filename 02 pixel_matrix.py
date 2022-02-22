@@ -7,26 +7,28 @@ img = cv2.imread("image/gr_10k.jpg",1)
 h, w, c = img.shape
 print("Dimensions of the image is:nnHeight:", h, "pixelsnWidth:", w, "pixelsnNumber of Channels:", c)
 
-x1=12
-x2=421
-y1=330
-y2=61
+x1=14
+x2=318
+y1=368
+y2=62
 
 matrix = np.asarray(img)
-print('matrix ',matrix)
+#print('matrix ',matrix)
 m=(y2-y1)/(x2-x1)
 b=y1-m*x1
-print('m ',m,' ',b)
+#print('m ',m,' ',b)
 arr=[]
 xmax=max(x1,x2)
 ymax=max(y1,y2)
-for x in range(x1,x2):
-    for y in range(y1,y2):
+xmin=min(x1,x2)
+ymin=min(y1,y2)
+for x in range(xmin,xmax):
+    for y in range(ymin,ymax):
         y3=m*x+b
-        print('cek 4 ',int(y3),' ',y)
+        #print('cek 4 ',int(y3),' ',y)
         #s=cnt+str(matrix[x][y])
         if int(y3)==int(y):
-            print('cek')
+            #print('cek')
             arr.append(matrix[x][y])
 
 filename='image/10k.csv'

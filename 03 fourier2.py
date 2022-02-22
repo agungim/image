@@ -7,7 +7,7 @@ from scipy.signal import blackman
 from scipy.fftpack import fft, fftfreq
 import matplotlib.pyplot as plt
 
-filename="image/1k.txt"
+filename="image/10k.txt"
 
 
 def line_prepender(filename, line):
