@@ -55,7 +55,7 @@ with open('image/1k.txt', 'w') as f:
         f.write('\n')   
 
 
-
+'''
 from scipy.fft import fft, fftfreq
 from matplotlib import pyplot as plt
 # Number of samples in normalized_tone
@@ -66,4 +66,4 @@ xf = fftfreq(N, 1 / 10)[:N]
 
 plt.plot(xf, np.abs(yf))
 plt.show()
-
+'''
