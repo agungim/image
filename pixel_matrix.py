@@ -7,10 +7,10 @@ img = cv2.imread("image/gr_1k.jpg", 1)
 h, w, c = img.shape
 print("Dimensions of the image is:nnHeight:", h, "pixelsnWidth:", w, "pixelsnNumber of Channels:", c)
 
-x1=19
-x2=356
-y1=65
-y2=107
+x1=40
+x2=60
+y1=10
+y2=82
 
 matrix = np.asarray(img)
 m=(y2-y1)/(x2-x1)
